@@ -1,0 +1,101 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: rgb(50, 226, 34);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    text-align: center;
+    color: #0f0322;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input, select, button {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+button {
+    background-color: #051e38;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#resumen {
+    margin-top: 30px;
+    padding: 15px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+}
+
+.registros {
+    display: none;
+    margin-top: 30px;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.table-registros {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.table-registros th, .table-registros td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+button {
+    margin-top: 10px;
+    margin-right: 10px;
+    background-color: #1900ff;
+    color: white;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button.editar {
+    background-color: #28a745;
+}
+
+button.editar:hover {
+    background-color: #218838;
+}
+
+button.eliminar {
+    background-color: #dc3545;
+}
+
+button.eliminar:hover {
+    background-color: #c82333;
+}
+#tablaRegistros {
+    display: table;  /* Aseguramos que la tabla sea visible al inicio */
+}

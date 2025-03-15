@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Ventas Mercado Pago</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Registro de Ventas Mercado Pago</h1>
+        <h2><u>Supermercado Mayorista Emanuel(Simoca)</u></h2>
+        <form id="ventaForm">
+            <label for="tipoVenta"><strong>Tipo de Venta:</strong></label>
+            <select id="tipoVenta" required>
+                <option value="transferencia">Transferencia</option>
+                <option value="codigoQR">Código QR</option>
+            </select>
+
+            <label for="monto"><strong>Monto (en pesos):</strong></label>
+            <input type="number" id="monto" required placeholder="Monto de la venta" step="0.01">
+            
+            <button type="submit"><strong> Registrar Venta</strong></button>
+        </form>
+
+        <div id="resumen">
+            <h2>Resumen de Ventas</h2>
+            <p><strong>Ventas Transferencia: </strong><span id="totalTransferencias">0</span></p>
+            <p><strong>Ventas Código QR: </strong><span id="totalCodigoQR">0</span></p>
+            <p><strong>Total de Ventas: </strong><span id="totalVentas">0</span></p>
+            <button id="verRegistros">Ver Registros</button>
+        </div>
+
+        <div id="registros" class="registros">
+            <h2>Registros de Ventas</h2>
+
+            <button id="imprimirBtn">Imprimir</button>
+            <button id="exportarBtn">Exportar a CSV</button>
+
+            <button id="verPorDiaBtn">Ver Registros de Hoy</button>
+
+            <table id="tablaRegistros" class="tabla-registros">
+                <thead>
+                    <tr>
+                        <th>Tipo</th>
+                        <th>Monto</th>
+                        <th>Fecha</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="listaRegistros"></tbody>
+            </table>
+        </div>
+    </div>
+    <p><strong>User.name:Daniel Ferreyra</strong></p>
+    <script src="app.js"></script>
+</body>
+</html>
