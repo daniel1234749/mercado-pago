@@ -1,101 +1,128 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
+/* Reset some basic styles */
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7fc;
+    color: #333;
     padding: 20px;
 }
 
 .container {
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
-    background-color: rgb(50, 226, 34);
+    background: #fff;
     padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-h1, h2 {
+.header h1 {
     text-align: center;
-    color: #0f0322;
+    font-size: 2rem;
+    color: #4CAF50;
+    margin-bottom: 20px;
+}
+
+.form-container {
+    margin-bottom: 30px;
 }
 
 form {
     display: flex;
     flex-direction: column;
-    gap: 15px;
 }
 
-input, select, button {
+label {
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+}
+
+input, select {
     padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
     font-size: 1rem;
 }
 
-button {
-    background-color: #051e38;
+button.btn {
+    padding: 10px 20px;
+    background-color: #4CAF50;
     color: white;
+    border: none;
+    border-radius: 6px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-button:hover {
-    background-color: #0056b3;
+button.btn:hover {
+    background-color: #45a049;
 }
 
-#resumen {
-    margin-top: 30px;
+.totales {
+    background-color: #f9f9f9;
     padding: 15px;
-    background-color: #f0f0f0;
+    margin-bottom: 20px;
     border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-.registros {
+.totales div {
+    margin-bottom: 10px;
+}
+
+.totales span {
+    font-weight: bold;
+}
+
+.acciones {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.registros-container {
     display: none;
     margin-top: 30px;
-    padding: 15px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.table-registros {
+table {
     width: 100%;
     border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+button#toggleButton {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
     margin-top: 20px;
 }
 
-.table-registros th, .table-registros td {
-    padding: 10px;
-    text-align: center;
-    border: 1px solid #ddd;
-}
-
-button {
-    margin-top: 10px;
-    margin-right: 10px;
-    background-color: #1900ff;
-    color: white;
-}
-
-button:hover {
-    background-color: #0056b3;
-}
-
-button.editar {
-    background-color: #28a745;
-}
-
-button.editar:hover {
-    background-color: #218838;
-}
-
-button.eliminar {
-    background-color: #dc3545;
-}
-
-button.eliminar:hover {
-    background-color: #c82333;
-}
-#tablaRegistros {
-    display: table;  /* Aseguramos que la tabla sea visible al inicio */
+button#toggleButton:hover {
+    background-color: #45a049;
 }
