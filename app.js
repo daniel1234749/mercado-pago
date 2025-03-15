@@ -88,29 +88,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
         ventas = filtroFecha ? ventas.filter(venta => venta.fechaDia === filtroFecha) : ventas;
 
-        ventas.forEach((venta) => {
+        ventas.forEach((venta, index) => {
             const row = document.createElement('tr');
             row.innerHTML = `
                 <td>${venta.tipo}</td>
                 <td>$${venta.monto.toFixed(2)}</td>
                 <td>${venta.fecha}</td>
                 <td>
-                    <button class="editar" onclick="editarRegistro(${venta})">Editar</button>
-                    <button class="eliminar" onclick="eliminarRegistro(${venta})">Eliminar</button>
+                    <button class="editar" onclick="editarRegistro(${index})">Editar</button>
+                    <button class="eliminar" onclick="eliminarRegistro(${index})">Eliminar</button>
                 </td>
             `;
             listaRegistros.appendChild(row);
         });
     }
-
-    // Función para editar un registro
-    window.editarRegistro = function(index) {
-        let ventas = JSON.parse(localStorage.getItem('ventas')) || [];
-        const venta = ventas[index];
-        tipoVenta.value = venta.tipo;
-        montoInput.value = venta.monto;
-        // Guardar el índice de edición en un campo oculto
-    };
 
     // Función para eliminar un registro
     window.eliminarRegistro = function(index) {
